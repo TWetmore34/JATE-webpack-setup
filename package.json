@@ -2,7 +2,7 @@
   "name": "JATE",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "private": true,
   "scripts": {
     "start:dev": "concurrently \"cd client && npm run build\" \"cd server && npm run server\"",
     "start": "npm run build && cd server && node server.js",
@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "idb": "^7.0.2",
     "if-env": "^1.0.4"
   },
   "devDependencies": {
