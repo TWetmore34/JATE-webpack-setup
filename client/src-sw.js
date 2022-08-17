@@ -24,13 +24,10 @@ const pageCache = new CacheFirst({
 
 // this is unmentioned in the activities. were importing it from workbox recipies tho so thats where to start
 warmStrategyCache({
-  urls: ['/index.html', '/'],
+  urls: ['./index.html', '/'],
   strategy: pageCache,
 });
 
-// callback function to look for req.mode(whats that?) then loads pageCache
-// does pageCache only load on a true value?
-// when this searches for a particular path name, is that checking against our actual folder structure, or the url
 registerRoute(({ request }) => request.mode === 'navigate', pageCache);
 
 // TODO: Implement asset caching (does this just mean static assets ie pictures and css?)
