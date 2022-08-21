@@ -34,8 +34,9 @@ module.exports = () => {
         background_color: '#272822',
         icons: [
           {
-            src: path.join(__dirname, '/src/images/logo.png'),
-            size: 96
+            src: path.resolve('src/images/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
           }
         ],
         start_url: './',
